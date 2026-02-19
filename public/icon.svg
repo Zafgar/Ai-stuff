@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="80" fill="#1a1a2e"/>
+  <!-- Sword blade -->
+  <rect x="244" y="48" width="24" height="280" rx="6" fill="#c9a84c"/>
+  <!-- Sword tip -->
+  <polygon points="256,48 240,90 272,90" fill="#e8c96d"/>
+  <!-- Cross guard -->
+  <rect x="176" y="296" width="160" height="24" rx="8" fill="#c9a84c"/>
+  <!-- Grip -->
+  <rect x="248" y="320" width="16" height="80" rx="4" fill="#8b6914"/>
+  <!-- Pommel -->
+  <circle cx="256" cy="416" r="20" fill="#c9a84c"/>
+  <!-- Decorative lines on blade -->
+  <rect x="252" y="100" width="8" height="160" rx="2" fill="#e8c96d" opacity="0.4"/>
+</svg>
