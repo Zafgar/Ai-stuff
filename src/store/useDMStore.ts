@@ -19,6 +19,7 @@ interface DMStore {
   saveToLibrary: (id: string) => void
   removeFromLibrary: (libraryId: string) => void
   addFromLibrary: (libraryId: string) => string
+  addDirectToLibrary: (partial: Partial<Creature>) => void
   saveToCampaign: (id: string) => void
   removeFromCampaign: (id: string) => void
 
@@ -156,6 +157,11 @@ export const useDMStore = create<DMStore>()(
         if (!creature) return
         const libEntry = { ...createEmptyCreature({ ...creature }), type: creature.type }
         set((s) => ({ library: { ...s.library, [libEntry.id]: libEntry } }))
+      },
+
+      addDirectToLibrary: (partial) => {
+        const entry = createEmptyCreature(partial)
+        set((s) => ({ library: { ...s.library, [entry.id]: entry } }))
       },
 
       removeFromLibrary: (libraryId) => {
